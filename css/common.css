@@ -39,13 +39,3 @@ button {
   width: auto;
   height: 350px;
 }
-
-
-/* Task 6 */
-.validation-input.valid {
-  border: 1px solid green;
-}
-
-.validation-input.invalid {
-  border-color: #f44336;
-}
