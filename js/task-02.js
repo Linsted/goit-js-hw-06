@@ -15,9 +15,7 @@ const elements = ingredients.map(el => {
   itemEl.textContent = el;
   return itemEl;
 })
-console.log(elements);
  
-
 listEl.append(...elements)
 
 
