@@ -13,7 +13,6 @@ const destroyButREF = document.querySelector('[data-destroy]')
 // Змінні////
 let divWidth = 30;
 let divHeight = 30;
-const arr = [];
 let string = '';
 
 
@@ -22,9 +21,9 @@ createButREF.addEventListener('click', () => {
   string = string.padStart(inputREF.value)
 
 if (string === '') {
-      alert('Please put digit!');}
+     return alert('Please put digit!');}
 
-else { for (const el of string) {
+ for (const el of string) {
       const divREF = document.createElement(`div`)
       divREF.style.width = `${divWidth}px`
       divREF.style.height = `${divHeight}px`
@@ -34,15 +33,11 @@ else { for (const el of string) {
     
       mainDivREF.append(divREF);
       string = '';
-      inputREF.value = '';
-
-    destroyButREF.addEventListener('click', () => {
-        divREF.remove();
-        document.location.reload(true);})
-    
-    }
-  }
+      inputREF.value = '';} 
 })
 
+    destroyButREF.addEventListener('click', () => {
+      mainDivREF.innerHTML = '';
+      document.location.reload(true);})
 
  
